@@ -67,6 +67,7 @@ hold off;
 
 
 
+
 %% =========== Part 1: Regularized Logistic Regression ============
 %  In this part, you are given a dataset with data points that are not
 %  linearly separable. However, you would still like to use logistic
@@ -155,6 +156,8 @@ initial_theta = zeros(size(X, 2), 1);
 
 % Set regularization parameter lambda to 1 (you should vary this)
 lambda = 1;
+% lambda = 0;
+
 
 % Set Options
 options = optimset('GradObj', 'on', 'MaxIter', 400);
@@ -174,6 +177,8 @@ ylabel('Microchip Test 2')
 
 legend('y = 1', 'y = 0', 'Decision boundary')
 hold off;
+% hold on;
+
 
 % Compute accuracy on our training set
 p = predict(theta, X);
@@ -181,3 +186,6 @@ p = predict(theta, X);
 fprintf('Train Accuracy: %f\n', mean(double(p == y)) * 100);
 fprintf('Expected accuracy (with lambda = 1): 83.1 (approx)\n');
 
+
+fprintf('\nProgram paused. Press enter to continue.\n');
+pause;
