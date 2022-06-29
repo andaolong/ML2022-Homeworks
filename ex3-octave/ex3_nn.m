@@ -15,9 +15,21 @@
 %  For this exercise, you will not need to change any code in this file,
 %  or any other files other than those mentioned above.
 %
+%  实验三的后半部分，是要用已经课程提供的、已经训练好的参数来预测手写图片
+
+
+
+
+
 
 %% Initialization
 clear ; close all; clc
+
+
+
+
+
+
 
 %% Setup the parameters you will use for this exercise
 input_layer_size  = 400;  % 20x20 Input Images of Digits
@@ -25,13 +37,20 @@ hidden_layer_size = 25;   % 25 hidden units
 num_labels = 10;          % 10 labels, from 1 to 10   
                           % (note that we have mapped "0" to label 10)
 
+
+
+
+
+
+
 %% =========== Part 1: Loading and Visualizing Data =============
 %  We start the exercise by first loading and visualizing the dataset. 
 %  You will be working with a dataset that contains handwritten digits.
-%
+%  载入数据并可视化几张图片，和第一部分一样
 
 % Load Training Data
 fprintf('Loading and Visualizing Data ...\n')
+
 
 load('ex3data1.mat');
 m = size(X, 1);
@@ -45,6 +64,17 @@ displayData(X(sel, :));
 fprintf('Program paused. Press enter to continue.\n');
 pause;
 
+
+
+
+
+
+
+
+
+
+
+
 %% ================ Part 2: Loading Pameters ================
 % In this part of the exercise, we load some pre-initialized 
 % neural network parameters.
@@ -53,6 +83,23 @@ fprintf('\nLoading Saved Neural Network Parameters ...\n')
 
 % Load the weights into variables Theta1 and Theta2
 load('ex3weights.mat');
+% The matrices Theta1 and Theta2 will now be in your Octave
+% environment
+% Theta1 has size 25 x 401
+% Theta2 has size 10 x 26
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %% ================= Part 3: Implement Predict =================
 %  After training the neural network, we would like to use it to predict
